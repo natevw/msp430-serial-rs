@@ -7,7 +7,8 @@ rustflags = [
     "-C", "link-arg=-Tlink.x",
     "-C", "link-arg=-nostartfiles",
     "-C", "link-arg=-mcpu=msp430",
-    "-C", "link-arg=-lmul_f5",
+    "-C", "link-arg=-lmul_none",
+    #"-C", "link-arg=-lmul_f5",
     #"-C", "link-arg=-lgcc",
 ]
 
