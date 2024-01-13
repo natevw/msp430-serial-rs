@@ -1,0 +1,18 @@
+# see https://github.com/rust-embedded/msp430-quickstart/blob/master/.cargo/config for details
+
+[target.msp430-none-elf]
+runner = "msp430-elf-gdb -q -x mspdebug.gdb"
+
+rustflags = [
+    "-C", "link-arg=-Tlink.x",
+    "-C", "link-arg=-nostartfiles",
+    "-C", "link-arg=-mcpu=msp430",
+    "-C", "link-arg=-lmul_f5",
+    #"-C", "link-arg=-lgcc",
+]
+
+[build]
+target = "msp430-none-elf"
+
+[unstable]
+build-std = ["core"]
