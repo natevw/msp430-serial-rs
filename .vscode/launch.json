@@ -1,0 +1,25 @@
+{
+  // HT: https://github.com/michkrom/msp430-ansluta/blob/a6d9cc72837934ffc9fbcc700bbcc5318d744eac/.vscode/launch.json#L6C1-L26C6
+  // and https://github.com/4a-42/Blinkey_pp/blob/fa626d1409668cdf5fc9d61287d14ffe4082656c/.vscode/launch.json#L24
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Debug",
+          "type": "cppdbg",
+          "request": "launch",
+          //"targetArchitecture": "MSP430X",
+          "miDebuggerPath": "msp430-elf-gdb",
+          "miDebuggerServerAddress": "localhost:2000",
+          "linux": {
+            "debugServerPath": "mspdebug",
+            "debugServerArgs": "tilib gdb",
+          },
+          "windows": {
+            "debugServerPath": "C:/ti/msp430-gdbproxy-1.10/msp430-gdbproxy.exe",
+            "debugServerArgs": "--32bitregs",
+          },
+          "program": "${workspaceRoot}/target/msp430-none-elf/debug/msp430-serial-demo",
+          "cwd": "${workspaceFolder}",
+      }
+  ]
+}
