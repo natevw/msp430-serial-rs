@@ -3,6 +3,8 @@
 Notes re. building and deploying to an MSP430 LaunchPad device from an ARM version of Debian Linux.
 You'll need to compile a few of the tools from source as vendor doesn't provide not aarch64 builds.
 
+This should work on a Raspberry Pi or possibly on Chrome OS via a Crostini VM.
+
 
 ## Rust basics
 
