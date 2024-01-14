@@ -50,9 +50,15 @@ vi ~/.bashrc
 Get gdb working with the lite MSP-FET debugger bits built in to the LaunchPad:
 
 ```
-sudo apt-get install mspdebug
+#sudo apt-get install mspdebug
 # ^^^ older 0.23 version, see https://github.com/dlbeer/mspdebug
 #     via https://github.com/cr1901/mspdebug-embedded wrapper.
+
+sudo apt-get install libusb-dev libreadline-dev
+git clone https://github.com/dlbeer/mspdebug.git
+cd mspdebug
+make
+sudo make install
 
 curl -O https://dr-download.ti.com/software-development/driver-or-library/MD-4vnqcP1Wk4/3.15.1.1/MSPDebugStack_OS_Package_3_15_1_1.zip
 unzip -d MSPDebug MSPDebugStack_OS_Package_3_15_1_1.zip
@@ -79,6 +85,10 @@ vi ~/.bashrc
 
     # add
     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/cpi/MSPDebug"
+
+# but for VSCode, afaict much simpler if just:
+sudo cp /home/cpi/MSPDebug/libmsp430.so /usr/lib
+sudo ldconfig
   
  # using e.g. <https://github.com/cr1901/msp430f5529-quickstart/tree/main/examples/bench>
  cargo build --release --example bench
