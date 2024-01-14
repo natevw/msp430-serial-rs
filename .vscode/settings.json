@@ -1,0 +1,4 @@
+{
+  // HT: https://stackoverflow.com/questions/65722396/how-to-avoid-e0463-cant-find-crate-for-test-cant-find-crate-when-building/75047420#75047420
+  "rust-analyzer.check.allTargets": false
+}
