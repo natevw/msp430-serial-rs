@@ -18,6 +18,7 @@
             "debugServerPath": "C:/ti/msp430-gdbproxy-1.10/msp430-gdbproxy.exe",
             "debugServerArgs": "--32bitregs",
           },
+          "svdPath": "${workspaceFolder}/.vscode/msp430f5529.svd",
           "program": "${workspaceRoot}/target/msp430-none-elf/debug/msp430-serial-demo",
           "cwd": "${workspaceFolder}",
       }
