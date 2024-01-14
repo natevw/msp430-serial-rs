@@ -17,11 +17,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Optional: install "cargo-generate" plugin if wanting to directly do any quickstart projects e.g.
 
 ```
-sudo dd if=/dev/zero of=/swapfile bs=1024 count=2M
-sudo mkswap /swapfile
-sudo chmod 0600 /swapfile
-sudo swapon /swapfile
-
 #sudo apt-get install openssl libssl-dev
 #cargo install cargo-generate
 cargo install cargo-generate --no-default-features
